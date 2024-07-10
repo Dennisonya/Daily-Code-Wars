@@ -1,4 +1,4 @@
-#DAILY-CODE-WARS
+# DAILY-CODE-WARS
 
 This project is a collection of my daily coding challenge solutions from Codewars, where I tackle various programming problems to enhance my skills and problem-solving abilities.
 
