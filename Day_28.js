@@ -11,3 +11,17 @@ function getMiddle(s) {
       ? kata[middle - 1] + kata[middle]
       : kata[middle];
   }
+
+  //Given a string of digits, you should replace any digit below 5 with '0'
+ //  and any digit 5 and above with '1'. Return the resulting string.
+ // (7kyu) Fake Binary
+
+ function fakeBin(x){
+    let kata = x.split('')
+    
+    kata = kata.map(element=>{
+      let number = Number(element)
+       return number < 5 ? element = '0' : element ='1'
+    })
+    return kata.join('')
+  }
