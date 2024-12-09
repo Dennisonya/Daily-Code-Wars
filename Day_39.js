@@ -34,3 +34,17 @@ function doubleChar(str) {
     return result.join('');
   }
   
+//Simple, given a string of words, return the length of the shortest word(s).
+
+//(7KYU) Shortest word
+
+function findShort(s){
+    let words = s.split(" ")
+    let minLength = words[0].length
+    
+    for(let i = 0; i< words.length; i++){
+      if(words[i].length <= minLength)
+        minLength = words[i].length
+    }
+    return minLength;
+  }
