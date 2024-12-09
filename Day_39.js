@@ -16,3 +16,21 @@ function accum(s) {
   
   return result.join('-');
 }
+
+//Given a string, you have to return a string in which each 
+// (case-sensitive) is repeated once.
+
+// (8kyu) Double Char
+
+function doubleChar(str) {
+    // Your code here
+    let string = str.split('')
+    let result = []
+      for(let i = 0; i< string.length; i++){
+    let segment = string[i] + string[i].repeat(1);
+        result.push(segment);
+      }
+    
+    return result.join('');
+  }
+  
