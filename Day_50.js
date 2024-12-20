@@ -17,3 +17,22 @@ function lonelyinteger(a) {
         }
 }
 }
+
+//Given a square matrix, calculate the absolute difference between the sums of its diagonals.
+
+
+function diagonalDifference(arr) {
+    // Write your code here
+    let right=0, left=0;
+    
+    for(let i = 0; i<arr.length; i++){
+        for(let j=0; j<arr.length; j++){
+            if(i === j){
+                right+= arr[i][j]
+            }if(i+j === arr.length -1){
+                left += arr[i][j]
+            }
+        }
+    }
+    return Math.abs(right - left);
+}
