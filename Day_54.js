@@ -15,3 +15,26 @@ function rotate(array,n){
     
     return array.slice(-n).concat(array.slice(0,-n));
   }
+
+  //Input: String which consists of two positive numbers (doubles)
+  //  and exactly one operator like +, -, * or / always between
+  //  these numbers. The string is dirty, which means that there
+  //  are different characters inside too, not only numbers and
+  //  the operator. You have to combine all digits left and right, 
+  // perhaps with "." inside (doubles), and to calculate the result 
+  // which has to be rounded to an integer and converted to a string at the end.
+
+  //(6KYU) Basics 03: Strings, Numbers and Calculation
+
+  function calculateString(st){
+    //..
+      const validCharacters = st.split('').filter(x => !isNaN(x) || "+-*/.".includes(x));
+     const sanitizedString = validCharacters.join('');
+      try {
+        const result = eval(sanitizedString);
+        return Math.floor(result).toString(); 
+    } catch (error) {
+        return "Error";
+      }
+  
+}
