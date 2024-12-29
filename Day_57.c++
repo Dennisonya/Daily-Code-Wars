@@ -23,3 +23,30 @@ void printLinkedList(SinglyLinkedListNode* head) {
     }
 
 }
+
+//You are given the pointer to the head node 
+//of a linked list and an integer to add to the
+// list. Create a new node with the given integer. 
+//Insert this node at the tail of the linked list 
+//and return the head node of the linked list formed 
+//after inserting this new node. The given head pointer
+// may be null, meaning that the initial list is empty.
+
+//(7KYU) insertNodeAtTail
+
+
+SinglyLinkedListNode* insertNodeAtTail(SinglyLinkedListNode* head, int data) {
+	SinglyLinkedListNode *temp= new SinglyLinkedListNode(data);
+    temp->next = NULL;
+    SinglyLinkedListNode *headerTemp= head;
+
+    if (head == NULL) {
+        return temp;
+    }
+
+    while(headerTemp->next != NULL){
+        headerTemp = headerTemp->next;
+    }
+    headerTemp->next = temp;
+    return head;
+}
