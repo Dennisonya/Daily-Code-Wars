@@ -15,10 +15,14 @@ SinglyLinkedListNode {
 
 
 SinglyLinkedListNode* deleteNode(SinglyLinkedListNode* llist, int position) {
-        if(position == 0){
-            free(llist);
-            return NULL;
+
+    if(position == 0){
+        SinglyLinkedListNode* temp = llist;
+        llist = llist->next;
+        free(temp);          
+        return llist;
         }
+
     int x = 1;
     SinglyLinkedListNode * temp;
     SinglyLinkedListNode * headerTemp = llist;
