@@ -22,3 +22,21 @@ void inOrder(Node *root) {
          std::cout<<root->data<<" ";
         inOrder(root->right);
     }
+
+
+    //Find the height of a binary Tree
+
+    int height(Node* root) {
+        // Write your code here.
+        int a,b,h;
+         if(root== NULL)
+            return -1;
+        a = height(root->left);
+        b = height(root->right);
+        if(a>b){
+            h =a +1;
+        }else {
+            h = b+1;
+        }
+        return h;
+    }
